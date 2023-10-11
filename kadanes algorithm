@@ -1,0 +1,26 @@
+abstract class Kadenes_algo
+{
+public static void main(String[] args)
+{
+    int a[] = {-2, -1, -3, 4, -1, 2, 1, -5, 4 };
+    int b = Max_Sub_Array_Sum(a);
+
+    System.out.println("Maxim  um sum is :" + b);
+}
+
+static int Max_Sub_Array_Sum(int a[])
+{   
+    int maxSum = a[0];
+       int sum = a[0];
+
+    for(int i=1; i<a.length; i++)
+    {
+        if( sum>0 ) { sum+=a[i]; }
+        else { sum = a[i]; }
+
+        if( sum>maxSum){ maxSum = sum ;}
+    } 
+
+    return maxSum;
+}
+}
