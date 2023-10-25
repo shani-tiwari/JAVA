@@ -1,0 +1,97 @@
+package Array;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class array1 
+{
+    public static void main(String[] args) 
+    {
+
+ //  1. Program to sort a numeric and string array. 
+
+
+            //    int a[] = {34, 56, 1, 7, 8, 5, 3, 34, 50, 41, 67, 69, 0};  //     int(numeric)      array
+            // String b[] = {"c++","java", "python", "html", "css", "js" };  //     String(character) array
+
+            // System.out.println("a : " + Arrays.toString(a));
+
+            // Arrays.sort(a);  // sort method uses Dual-Pivot QuickSort Algo. - O(n log(n)), doesn't return anything, static method, so that
+            //                 //it can invoked directly by their class name.  
+            // System.out.println(Arrays.sort(a));   -- can't write like that, not applicable..
+            //System.out.println("a : " + Arrays.toString(a));
+
+            
+            // System.out.println();
+            
+            // System.out.println("b : " + Arrays.toString(b));  //   .toString() -  help us to print all the content without using loops.
+
+            // Arrays.sort(b);    //  sort as per their ASCII values. 
+            // Arrays.sort(b, Collections.reverseOrder());  // print in reverse order. doesn't work with primitive data types.   
+                                                            //it's a method of Collection class. 
+            // System.out.println("b : " + Arrays.toString(b));  //   .toString() -  help us to print all teh content without loops. 
+            
+            // to use reverseOrder() method in primitive types. 
+            // Integer a1[] = {-4, -8, 23, 1, 77, 34, 41} ; 
+            // Arrays.sort(a1, Collections.reverseOrder());
+            // System.out.println(a1);  // address of a
+            // System.out.println(Arrays.toString(a1));
+
+
+                        //    Using loops to sort numeric array. 
+        //    for (int i = 0; i < b.length; i++) 
+        //    {
+        //         for (int j = i+1; j < b.length; j++) // don't try to start j = 1,  undesired output. 
+        //         {
+        //                 int temp = 0;
+        //                 if (a[i] > a[j])  // change > to < for descending order. 
+        //                  // comparing first element to the next one, if first one is bigger than it'll replaced by second one. 
+        //                 // the > is undefined to argument type string. 
+        //                 {
+        //                     // exchanging values
+        //                         temp = a[i];
+        //                         a[i] = a[j];
+        //                         a[j] = temp;
+        //                 }
+
+        //         }
+        //    } 
+        //     // Arrays.sort(a);
+        //     System.out.println(a);   //   prints the address of a(array).
+        //     System.out.println(Arrays.toString(a));  // print Array. 
+
+
+ // 2.  sort the subArray of a Array. (a array derived from array).
+
+            // int a2[] = {1, 6, 56, 34, 90, 23, 12, 54, 432, 87 ,32, 43, 21, 6745, 0};
+            // // sorting subarray from 5th(included) index to 11th(not included), means 5 to 10 index elements are sorted in ascending order. 
+            // Arrays.sort(a2, 5, 11);
+            // System.out.println(Arrays.toString(a2));
+
+
+ // 3.  sum of values of an array... and average value of array elements. 
+            // int sum = 0;
+            // for (int i = 0; i < a2.length; i++){ sum += a2[i]; }
+            // int ave = sum/a2.length;
+            // System.out.println("Sum is : "+sum);
+            // System.out.println("Average is : "+ave);
+
+//  4.  check array contains a specific elememt or not. 
+
+               Scanner sc = new Scanner(System.in);
+                   int no = sc.nextInt();
+                   int a3[] = {1,2,3,4,5,6,7,8,9,0};
+                   
+                   for (int i = 0; i < a3.length; i++) 
+                   {
+                            if (no == a3[i]) 
+                            {
+                                System.out.println("Given Number "+ no +" is present in an array at the index " + i +  " elem in array is " + a3[i]+".");
+                                // java doesn't have indexOf method for arrays, so we printing i to show the index positionof given element.
+                            }
+                   }
+                   sc.close();
+
+    }
+}
