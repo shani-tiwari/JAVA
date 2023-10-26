@@ -93,5 +93,96 @@ public class array1
                    }
                    sc.close();
 
+
+//  5. removing a element from an array. 
+
+                //first method
+            //   int ary[] = {1, 2, 3, 4, 5, 6};
+            //   System.out.println(Arrays.toString(ary));
+            //   int removeIndex = 3;   // or we can input from user by Scanner class . works only till 4th index.  
+            //   for (int i = removeIndex; i < ary.length - 1; i++) 
+            //   {
+            //             ary[i] = ary[i+1] ;   // changing value from next one. -- 1 2 3 5 6 6
+            //   }
+            //   //  last and second last element will exist twice. 
+            //   System.out.println(Arrays.toString(ary));
+
+                //second method
+            // int temp = 0;
+            // for (int i = 0; i < ary.length; i++) 
+            // {
+            //     if (removeIndex != i) {
+            //         temp = ary[i] ;              // 1 2 3 3 5 6
+            //         } 
+            //     System.out.print(temp + "\s\s");
+            //   }
+
+                  //  third method
+            //   int ary2[] = new int[ary.length - 1];
+            //   int k = 0;                    // to increase length and add elements to ary2....
+            //   for (int i = 0; i < ary.length; i++) 
+            //   {
+            //     if (i == removeIndex) {
+            //         continue;             // agar i  ka index or removing index equal hai to kuch nahi karo...
+            //     }
+            //     ary2[k++] = ary[i];       // or if not equal , then add that index's element in ary2. 
+            //   }
+            //   System.out.println(Arrays.toString(ary2));
+
+                // fourth method
+            //  ArrayList<Integer> al = new ArrayList<Integer>() ;
+            //  al.add(0, 1);
+            //  al.add(2);
+            //  al.add(3);
+            //  al.add(4);
+            //  al.add(5);
+            //  al.add(6);
+            //  System.out.println("before : "+al);
+            //  al.remove(2);
+            //  System.out.println("after: "+al);
+             
+            //  or we can convert our array to arraylist..
+            //  List  al2 = Arrays.asList(ary)  ;                        doesn't working......‼️ ‼️ ‼️ ‼️ ‼️ ‼️
+            //  al2.remove(2);
+            //  System.out.println("after : " + Arrays.toArray(al2));   //  printing address. 
+
+
+//  6. insert a element at a specific position. 
+
+                // int a[] = {1,2,3,4,5,6,7,8,9};
+                // int indexposi = 3;
+                // int newVal = 412;
+                // for (int i = a.length - 1; i > indexposi; i--) {  // loop last se chalna start hokar -- ho raha hai or har last index pe 
+                //     // uske pehle wali value insert ho rahi hai, or jab desired indexposi  aai to loop end, or usme hamari new Val dal gai.
+                //         a[i] = a[i-1];
+                // }
+                // a[indexposi] = newVal;
+                // System.out.println(Arrays.toString(a));
+
+//  7.  find the max and min number.
+
+                    // Arrays.sort(a);
+                    // int max = a[0];
+                    // int min = a[a.length - 1];
+                    // System.out.println(max + " " + min);
+                    
+                    // // or  
+
+                    // int maximum = 0, minimum = 0;
+                    // for (int i = 0; i < a.length; i++) 
+                    // {
+                    //         if (maximum < a[i]) 
+                    //          {
+                    //             maximum = a[i];
+                    //         } 
+                    //         else if(minimum > a[i]) 
+                    //          {
+                    //             minimum = a[i];
+                    //         }   
+                    // }
+                    // System.out.println(maximum + " " + minimum);
+
+
+
     }
 }
