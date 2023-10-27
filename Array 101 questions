@@ -182,6 +182,181 @@ public class array1
                     // }
                     // System.out.println(maximum + " " + minimum);
 
+                           
+//  8.  reverse an integer array.
+
+                // int a[] = {1,2,3,4,5};
+                // int l = a.length-1;
+                // int l2 = a.length-1;
+                // int b[] = new int[l], k = 0;  // same length as a. 
+
+                // for (int i = l-1; i >= 0; i--) {
+                //             b[k++] = a[l2];         //  not printing last element. 
+                //             l2--;
+                // }
+                //b[l-1] = a[-----];
+                        // or
+                // int i = l-1;
+                // while (i >= 0) {
+                //     b[k++] = a[l2];          //  not printing last element. 
+                //     l2--;
+                //     i--;
+                // }
+                // last value auto last mai chali jayegi so , -1 extra
+                // mai last value pehle daal raha hu, 
+
+                // System.out.println(Arrays.toString(a));
+                // System.out.println(Arrays.toString(b));
+
+                            // or  -  proper solution. 
+                    // int a[] = {1,2,3,4,5};
+                    // System.out.println(Arrays.toString(a));
+                    // int l = a.length;
+
+                    // for (int i = 0; i < l/2; i++) 
+                    //     { int temp = a[i];   /// frist element on temp. 
+                    //             a[i] = a[l-i-1];   // a[5 - 0 - 1] = a[4]th index = 5. 
+                    //         a[l-i-1] = temp;    }   // first elem at last(4th index). 
+
+                    // System.out.println(Arrays.toString(a));
+
+    //  9.  find duplicate values. 
+                        // int a[] = {1,3,6,8,3,2,1,0,8,6};
+                        // int l = a.length;   // not -1 here
+                        //  in an integer array and also for String array. 
+                        // for (int i = 0; i < l; i++) {
+                        //             for (int j = i+1; j < l; j++) {   // not 1 here, every time it will start from starting. 
+                        //                     if (a[i] == a[j]) {
+                        //                         System.out.println("duplicate : "+a[j]);
+                                                
+                        //                     }
+                        //                 }
+                        //             }
+                        //  in an String array. 
+                        // String b[] = {"sh", "an", "it", "aw", "sh", "an"};
+                        // int l2 = b.length;   // not -1 here
+                        // for (int i = 0; i < l2; i++) {
+                        //             for (int j = i+1; j < l2; j++) {   // not 1 here, every time it will start from starting. 
+                        //                     if (b[i] == b[j]) {
+                        //                         System.out.println("duplicate : "+b[j]);
+                                                     
+                        //                     }
+                        //             }
+                        // }
+
+
+    // 10 . commom element between two array(String, integer) .
+                        //     int a[] = {1,2,3,4,5};
+                        //     int b[] = {6,7,8,9,1};
+                        //     String c[] = {"sh", "an"};
+                        //     String d[] = {"ti", "aw", "ui", "Sh"};
+                        //     int l1 = a.length;
+                        //     int l2 = b.length;
+                        //     int l3 = c.length;
+                        //     int l4 = d.length;
+                        //             // for integer
+                        //   for (int i = 0; i < l1; i++) {
+                        //             for (int j = 0; j < l2; j++) {
+                        //                     if (a[i] == b[j]) {
+                        //                             System.out.println(a[i] + " is a common element. ");
+                        //                     }
+                        //                 }
+                        //             }
+                        //            //  for string 
+                        //     HashSet<String> set = new HashSet<String>();
+                        //     for (int i = 0; i < l3; i++) {
+                        //             for (int j = 0; j < l4; j++) {
+                        //                     if (c[i].equals(d[j])) {
+                        //                          set.add(d[j]);//System.out.println(a[i] + " is a common element. ");
+                        //             }
+
+                        //         }
+                        //      }
+                        //      System.out.println((set) + " is common. ");
+                            
+    
+    //  11.  remove duplicate element from array.
+                            // int a[] = {1, 2, 3, 4, 5, 4, 3, 2, 1, 6, 6, 7, 7, 8, 8};
+                            // int   l = a.length;
+                            // for (int i = 0; i < l; i++) {
+                            //             for (int j = i+1; j < l; j++) {
+                            //                     if (a[i] == a[j]) {  // checking all the elements after ith posotion. 
+                            //                             a[j] = a[l-1];  // last element inserting at (i+1)th posi. and deleting last idx by l--;
+                            //                             l--; 
+                            //                     }
+                            //             }
+                            // }
+                            // int a1[] = Arrays.copyOf(a, l);
+                            // System.out.println(Arrays.toString(a1));  
+ 
+    //  12.  add two matrices of same size. 
+                            // int a[][] = {{1, 2, 3 }, {4, 5, 6 }, {7, 8, 9 }};
+                            // int b[][] = {{3, 2, 1 }, {4, 5, 4 }, {9, 8, 7 }};
+                            // int l1 = a.length; int l2 = b.length;
+                            // int c[][] = new int[l1][l2]; 
+                            //  System.out.println("first array : ");      // printing first original array
+                            // for (int i = 0; i < l1; i++) {
+                            //             for (int j = 0; j < l1; j++) {
+                            //                     System.out.print(a[i][j] + "\s");
+                            //             }
+                            //             System.out.println();             // after onr line. come to next line
+                            // }
+                            // System.out.println("second array : ");      //  printing second original array
+                            // for (int i = 0; i < l2; i++) {
+                            //             for (int j = 0; j < l2; j++) {
+                            //                  System.out.print(b[i][j] + "\s");
+                            //             }
+                            //             System.out.println();           
+                            // }
+                            // // adding elements according to position. 
+                            // System.out.println("final array with added elements : ");
+                            // for (int i = 0; i < l1; i++) {
+                            //     for (int j = 0; j <l2; j++) {
+                            //             //int sum = a[i][j] + b[i][j];
+                            //             c[i][j] = a[i][j] + b[i][j];
+                            //     }
+                            // }
+                            // for (int i = 0; i < l1; i++) {
+                            //             for (int j = 0; j < l2; j++) {
+                            //                  System.out.print(c[i][j] + "\s\s");
+                            //             }
+                            //             System.out.println();          
+                            // }
+        
+    //  13.  convert an array to arraylist and arraylist to array. 
+
+                                         // array to arraylist
+                            // int a[] = {1, 2, 3, 4, 5};     ----    can't be converted
+                            String s[] = {"php", "python", "java", "javascript", "css"};
+                            ArrayList<String> al = new ArrayList<String>();
+                                     // al = Arrays.asList(s);  --  can't convert from list to arraylist
+
+                            Collections.addAll(al, s);
+                            al.add("c++");      // adding tp show - converted
+                            System.out.println(al);
+
+                                     //  to use asList() method. 
+                            List<String> l = new ArrayList<String>(Arrays.asList(s)) ;
+                            l.add("html");
+                            System.out.println(l);
+                            
+                            List<String> li = Arrays.asList(s) ;
+                            //li.add(0, "C");  // can't add another element, coz it returns fixed-size
+                            System.out.println(li);
+
+                                //   arraylist to array  
+                            ArrayList<String> a = new ArrayList<String>();
+                            a.add("ram");
+                            a.add("shyam");
+                            a.add("Rraman");
+                            a.add("ramnath");
+                            a.add("ramkumar");
+
+                            String s2[] = new String[a.size()];  // taking length of arraylist.
+                            a.toArray(s2);
+                            //s2[5] = "ramgovind";   ---  can't be added, ArrayIndexOutOfBoundException
+                            System.out.println(Arrays.toString(s2));
+
 
 
     }
