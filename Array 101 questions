@@ -356,6 +356,27 @@ public class array1
                             a.toArray(s2);
                             //s2[5] = "ramgovind";   ---  can't be added, ArrayIndexOutOfBoundException
                             System.out.println(Arrays.toString(s2));
+    //  14.  find all pairs element in an array whose sum is equal to specified number. 
+
+                    //     sumvalue(new int[] {1, 2, 3, 4, 5, 6, 7, 7}, 8);
+                    //     sumvalue(new int[] {5, -6, 2, 9, -1, 18, 3}, 5);
+        
+        
+        
+        
+                    //   // make sure to give a no that can be a answer of atleast one pair.
+                    //     // make this method outside of main method, otherwise error
+                    //     static void sumvalue(int []a , int no)
+                    //     {
+                    //         int l = a.length;
+                    //         for (int i = 0; i < l; i++) {
+                    //                     for (int j = i+1; j < l; j++) {
+                    //                             if(a[i] + a[i] == no){
+                    //                                     System.out.println(a[i] + " + " + a[j] + " = " + no);
+                    //                             }
+                    //                     }
+                    //         }
+                    //     }
 
 
 
