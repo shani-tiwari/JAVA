@@ -378,6 +378,30 @@ public class array1
                     //         }
                     //     }
 
+    //  15 . test two arrays equality. (both have same element ay same index)
+                           int a[] = {1, 2, 3, 4, 5};
+                           int b[] = {1, 2, 3, 4, 5};
+                            int l1 = a.length;
+                            int l2 = b.length;
+                        boolean bo = true;
+                        if (l1 == l2) {                        
+                                for (int i = 0; i < l1; i++) {
+                                             if (a[i] != b[i]) {
+                                                    bo = false;
+                                            }
+                                }
+                          }
+                          else{
+                             bo = false;        // when length were different
+                          }
+                          // if remains true, arrays are equal. 
+                          if (bo) {
+                                System.out.println("Equal");
+                          }
+                          else{
+                            System.out.println("not equal. ");
+                          }
+
 
 
     }
