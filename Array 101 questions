@@ -1,5 +1,3 @@
-package Array;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
@@ -402,7 +400,73 @@ public class array1
                             System.out.println("not equal. ");
                           }
 
+    // 16.  find a missing number in an array. 
+                            // int a[] = {1, 2, 3, 4, 5, 6, 8, 9};
+                            // int l = a.length;
+                            // int smallest = a[0];
+                            // int largest = a[a.length];
+                            // for (int i = smallest; i <= largest; i++) {
+                            //             if (a[i] == i+1) {
 
+                            //             }else{
+                            //                     System.out.println("missing no is : " + i);
+                            //             }
+                                
+                            // }
+
+                                // int lastnum = a[a.length-1];  // contains last value. 
+                                //     // System.out.println(lastnum);
+                                // int n = lastnum * ( (lastnum + 1) / 2 );  // 32 -- this is the expected output if that element isn't missing. 
+                                //      //System.out.println(n);
+                                // // declaring element to add all numbers
+                                // System.out.println(sum);
+                                // System.out.println("missing element is : " + (n - sum));
+                                
+                                    // int sum = ((l+1)*(l+2)/2); // contains 
+                                    // System.out.println("if that element present then the sum would be : " + sum);  // 45
+
+                                    // int sum2 = 0;
+                                    // for (int i : a) {
+                                    //         sum2 += i;
+                                    // }
+                                    // System.out.println("addition of element with missing element : " + sum2);    // 43
+
+                                    // //  so difference of those gives us a missing number. 
+                                    // System.out.println(" missing number : " + (sum - sum2));
+                                    // for (int i = 0; i < l; i++) {
+                                    //             sum -= a[i];
+                                    //         }
+                                    //         System.out.println(" missing number : "+sum);
+
+        // 17. find common elements in three sorted arrays. 
+                                        // when all arrays are of same size. 
+                                    // int a[] = {1, 3, 5, 9};
+                                    // int b[] = {9,  5, 1};
+                                    // int c[] = {1, 2, 5, 9, 7, 8};
+                                    // int l1 = a.length;
+                                    // int l2 = a.length;
+                                    // int l3 = a.length;
+                                    //     System.out.print("Common Element is : ");
+                                    // for (int i = 0; i < l1; i++) 
+                                    // {
+                                    //             for (int j = 0; j < l2; j++) 
+                                    //             {
+                                    //                     // if (a[i] == b[j]) 
+                                    //                     // {
+                                    //                             for (int j2 = 0; j2 < l3; j2++) 
+                                    //                             {
+                                    //                                         if (a[i] == b[j] &&  b[j] == c[j2]) // comparing like this is more good than that. 
+                                    //                                         {
+                                    //                                                 System.out.print( a[i] + " \s ");
+                                    //                                                 j2++;
+                                    //                                                 break;
+                                    //                                         }
+                                    //                             }
+                                    //                         // j++;
+                                    //                         // break;
+                                    //                     //}
+                                    //             }
+                                    // }
 
     }
 }
