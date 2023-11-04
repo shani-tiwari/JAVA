@@ -1,6 +1,11 @@
+import java.lang.foreign.StructLayout;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
+
 
 public class array 
 {
@@ -10,8 +15,8 @@ public class array
  //  1. Program to sort a numeric and string array. 
 
 
-            //    int a[] = {34, 56, 1, 7, 8, 5, 3, 34, 50, 41, 67, 69, 0};  //     int(numeric)      array
-            // String b[] = {"c++","java", "python", "html", "css", "js" };  //     String(character) array
+               int a[] = {34, 56, 1, 7, 8, 5, 3, 34, 50, 41, 67, 69, 0};     // int(numeric)   array
+               String b[] = {"c++","java", "python", "html", "css", "js" };  //     String(character) array
 
             // System.out.println("a : " + Arrays.toString(a));
 
