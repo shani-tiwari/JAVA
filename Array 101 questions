@@ -582,7 +582,48 @@ public class array
                                 //             }
                                 // }
                                
+        // 25 .  sum of the two element of a given array equal to a given integer. 
+                                    // int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9 };
+                                    // int l = a.length;
+                                    // int val = 11;
+                                    // for (int i = 0; i < l; i++) {
+                                    //     for (int j = i + 1; j < l; j++) {   // without i+1, we r getting some repeted solution like 2+9 & 9+2.
+                                    //                 if (a[i] + a[j] == val) {
+                                    //                         System.out.println("successful for :  " + a[i] + " + " + a[j]);
+                                    //                 }
+                                    //     }
+                                    // }
+       //  26. find all the different triplets such that the sum of all three elements is equal to specified value. 
+                                    // int a[] = {1, -4, 5, 2, -1, 0};
+                                    // int l = a.length;
+                                    // int val = 6;
+                                    // for (int i = 0; i < l; i++) {
+                                    //         for (int j = i+1; j < l; j++) {
+                                    //                 for (int j2 = j+1; j2 < l; j2++) {
+                                    //                             if (a[i] + a[j] + a[j2] == val) {
+                                    //                                     System.out.println(" Successful :) " + a[i] + " + " +a[j] + " + " + a[j2]);
+                                    //                             }
+                                    //                 }
+                                    //         }
+                                    // }
 
+        
+    // 27. get the majority element is an element that appears more than l/2 times.
+                                    int a[] = { 1, 5, 3, 7, 8, 3, 5, 2, 7, 2, 2, 2, 2 };
+                                    int l = a.length;
+                                    int t = l/2, count = 0;
+                                    System.out.println(" Desired number to appear : " + t);
+                                    for (int i = 0; i < l; i++) {
+                                            for (int j = 0; j < l; j++) {
+                                                    if ( a[i] == a[j]) {
+                                                            count++;
+                                                    }
+                                            }
+                                            if (count == t) {
+                                                    System.out.println(a[i] + " is majority elements. ");
+                                            }
+                                        
+                                    }
 
 
 
