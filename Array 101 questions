@@ -630,7 +630,111 @@ public class array
                                         
                                     }
 
+     // 28 .  find all the laders( if it's greater than all the element to it's right side ) in an array.        
+                                int a[] = {11, 2, 3, 4, 9, 8, 7, 1, 0, 6, 5};
+                                int l = a.length;
+                                 for (int i = 0; i < l; i++) {
+                                        int j;
+                                        for ( j = i + 1; j < l; j++) {
+                                                if ( a[i] <= a[j]) {   // check element is smaller then the next element or not, if yes than break loop
+                                // and get next element(second) from array & check it to all the other elements, if it's bigger than all the elements 
+                                //than loop ends when j<l, means ( j = 11 ), so j is equal to array length , then that elem get printed.  
+                                                        break;
+                                                }
+                                        }
+                                        if ( j == l) {
+                                                System.out.println(" j = " + j + ",  l = " + l);
+                                                System.out.println( "leader : " + a[i] + " \s \n ");
+                                        }
+                                 }
 
+       // 29 . find two elements in a given array of positive and negative number such that their sum is close to zero. 
+                                int a[] = {-1, 3, 6, -7, -2, 4, -5};
+                                int l = a.length;
+                                for (int i = 0; i < l; i++) {
+                                                for (int j = i+1; j < l; j++) {  
+                                                        // use i+1 avoid repetive result, like ( 3, -2 and -2 and 3)
+                                                                if (a[i] + a[j] >= 0 && a[i] + a[j] <= 1) {
+                                                                        System.out.println("solution : "+a[i] + " " + a[j] + " = " + (a[i] + a[j]));
+                                                                }
+                                                }
+                                }
+
+        //  30 . seprate 0's and 1's in an array into left and right side. 
+                                int a[] = {1, 0, 0, 1, 0, 1, 1, 0, 1, 0};
+                                System.out.println(Arrays.toString(a));
+                                int l = a.length;
+                                int f_idx = 0, l_idx = l-1 ;
+                                       
+                        while (f_idx < l_idx) {  // entry if first index smaller then last index ( array have some elements )
+                                while ( a[f_idx] == 0 ) {
+                                       // a[f_idx] = 0;
+                                        f_idx++;  // index increasing from start.
+                                }
+                                while ( a[l_idx] == 1 ) {
+                                        //a[l_idx]  = 0;
+                                        l_idx--;  // index decreasing from last. 
+                                }
+                                if ( f_idx < l_idx ) {
+                                        a[f_idx] = 0;
+                                        a[l_idx] = 1;
+                                        f_idx++;
+                                        l_idx--;
+                                }
+
+                        }
+                        System.out.println(Arrays.toString(a));
+
+     // 31 . coount number of possible triangles from a given unsorted array of positive integer. 
+                         // sum of length of any two sides of traingle must be greater then or equal to length of third side. 
+                         int a[] = {3, 5, 4};
+                         int count = 0;
+                         int l = a.length;
+                         Arrays.sort(a);
+                         System.out.println(Arrays.toString(a));
+
+                         for (int i = 0; i < l-2; ++i) {         // first element
+                                int third_elem = i+2;            // third element
+                                for (int j = i+1; j < l; ++j) {  // second element
+
+                                        while ( third_elem < l && a[i] + a[j] >= a[third_elem]) {
+                                        ++third_elem;
+                                        count += third_elem - j - 1;
+                                        }
+                                }
+                         }
+                        System.out.println(" No. of triangle : " + count);
+
+    // 32. cyclically rotate a array clockwise by one.
+                         int a[] = {10, 20, 30, 40, 50, 60};
+                          int l = a.length;
+                          System.out.println(Arrays.toString(a));
+
+                          int last = a[l-1];
+                          //System.out.println(last);  // 60
+                          for (int i = l-1; i > 0; i--) {
+                                    a[i] = a[i-1];  // shifting
+                          }
+                          a[0] = last;
+
+                          System.out.println(Arrays.toString(a));
+
+    // 33. arrange elements of an array so that all positive integers appear before all nagative int. 
+                            int a[] = {-1, 23, 56 ,2,3 ,1, 53 , 65,6 ,-4, -2, -6, -7, -1, -34};
+                            int l = a.length;
+                            for (int i = 0; i < l; i++) {
+                                    int j = i;  // at first time while doesn't executed coz to get j-1 at next term. 
+                                    // j>0 to avoid execution of while loop at first time, to avoid idxOutOfBound error(-1) .
+                                    while ( j > 0 && a[j] > 0 && a[j-1] < 0 ) {  // runs when current idx is posotive & previous one is negative.
+                                            // changing order by shifting negative forward and positive in starting. 
+                                            int temp = a[j];
+                                            a[j] = a[j-1];  // to last -> 
+                                            a[j-1] = temp;  // starting
+                                            j--;
+                                           
+                                    }
+                            }
+                            System.out.println(Arrays.toString(a));
 
 
 
